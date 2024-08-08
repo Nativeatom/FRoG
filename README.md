@@ -40,6 +40,32 @@ frog = load_dataset("GAIR/FRoG", TASK, SPLIT)
 ```
 while *TASK* belongs to {mask_quant, mislead, X, mask_percent} and *SPLIT* belongs to {easy, hard}.
 
+### Environment
+```python
+conda create -n frog python=3.8
+conda activate frog
+pip install -r requirement.txt
+```
+
+### Experiment
+```python
+python frog_reasoning.py --shots=SHOTS --num_samples=NUM_SAMPLES --task=TASK --split=SPLIT --save_dir=SAVE_DIR --model=MODEL_NAME --num_gpu=NUM_GPUS
+```
+#### Arguments
+- shots: number of in-context example used.
+- num_samples (default 0): number of FRoG samples.
+- task: mask strategies in FRoG, selected from {mask_quant|mask_percent|mislead|X}.
+- split: {easy|hard}
+- model_path: path to the model checkpoint for evaluation.
+- model_name: the model name used to identify the saving paths.
+- request_per_minute (default 10): only used when calling API-based large language models. 
+- save_dir: the directory to save the outputs.
+- save_outputs (default 0): 1 for saving the outputs.
+- num_gpu: number of GPUs deployed.
+
+#### Employing Commercial Large Language Models
+To employ commercial large language models like GPT-4 from OpenAI, please fill ```model_id, openai_api_key, openai_api_base``` in ```config.py```.
+
 ### Reference
 ```
 @article{li2024frogevaluatingfuzzyreasoning,
