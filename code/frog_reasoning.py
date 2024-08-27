@@ -182,7 +182,6 @@ if __name__ == "__main__":
     parser.add_argument("--num_gpu", type=int, default=1, help="number of gpu device used for parallization.")
     args = parser.parse_args()
 
-    dataset = args.dataset
     num_icl_example = args.shots
     num_samples = args.num_samples
     requests_per_minute = args.request_per_minute
@@ -216,4 +215,4 @@ if __name__ == "__main__":
 
     task_instruction = Instruction_frog if frog_reasoning_add_instruction else ""
 
-    quant_reasoning(dataset, task_name, task_instruction, num_icl_example, num_samples, requests_per_minute, arguments)
+    quant_reasoning(task_name, task_instruction, num_icl_example, num_samples, requests_per_minute, arguments)
