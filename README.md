@@ -68,13 +68,21 @@ To employ commercial large language models like GPT-4 from OpenAI, please fill `
 
 ### Reference
 ```
-@article{li2024frogevaluatingfuzzyreasoning,
-      title={FRoG: Evaluating Fuzzy Reasoning of Generalized Quantifiers in Large Language Models}, 
-      author={Yiyuan Li and Shichao Sun and Pengfei Liu},
-      year={2024},
-      eprint={2407.01046},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2407.01046}, 
+@inproceedings{li-etal-2024-frog,
+    title = "{FR}o{G}: Evaluating Fuzzy Reasoning of Generalized Quantifiers in {LLM}s",
+    author = "Li, Yiyuan  and
+      Sun, Shichao  and
+      Liu, Pengfei",
+    editor = "Al-Onaizan, Yaser  and
+      Bansal, Mohit  and
+      Chen, Yun-Nung",
+    booktitle = "Proceedings of the 2024 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2024",
+    address = "Miami, Florida, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.emnlp-main.411/",
+    doi = "10.18653/v1/2024.emnlp-main.411",
+    pages = "7239--7256"
 }
 ```
